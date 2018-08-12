@@ -4,7 +4,6 @@ class BankAccount
 
   def initialize(name)
     @name = name
-    @status = pending
     @balance = 1000
   end
 
