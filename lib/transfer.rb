@@ -10,8 +10,7 @@ class Transfer
   end
 
   def valid?
-    sender.balance <= 0 || sender.status =='closed' ? false : true 
-    receiver.balance <= 0 || receiver.status =='closed' ? false : true 
+    balance <= 0 || status =='closed' ? false : true
   end
 
 
