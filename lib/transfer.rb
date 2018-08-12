@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid?
-    BankAccount.valid?(self.sender) && BankAccount.valid?(self.reciever)
+    BankAccount.valid?(self.sender) && BankAccount.valid?(self.receiver)
   end
 
 
