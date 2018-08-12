@@ -18,6 +18,7 @@ class Transfer
     valid?
     sender.balance = sender.balance - amount
     receiver.balance = receiver.balance + amount
+    self.status = 'complete'
 
   end
 
