@@ -2,7 +2,7 @@ class BankAccount
   attr_accessor :status, :balance
   attr_reader :name
 
-  def self.initialize
+  def initialize(name)
     @name = name
     @status = pending
     @balance = 1000
