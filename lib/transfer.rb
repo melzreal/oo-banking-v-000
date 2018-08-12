@@ -1,16 +1,16 @@
 class Transfer
   attr_accessor :bank_account, :status
-  attr_reader :sender, :receiver, :amount
+  attr_reader :sender, :reciever, :amount
 
-  def initialize(sender, receiver, amount)
+  def initialize(sender, reciever, amount)
     @sender = sender
-    @receiver = receiver
+    @reciever = reciever
     @amount = amount
     @status = 'pending'
   end
 
   def valid?
-    bank_account.valid?(self.sender) && bank_account.valid?(self.receiver)
+    BankAccount.valid?(self.sender) && BankAccount.valid?(self.reciever)
   end
 
 
