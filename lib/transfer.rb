@@ -9,6 +9,9 @@ class Transfer
     @status = 'pending'
   end
 
+  def valid?
+    bank_account.valid(self.sender) && bank_account.valid(self.receiver)
+  end
 
 
 end
