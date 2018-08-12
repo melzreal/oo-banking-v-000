@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid?
-    balance <= 0 || status =='closed' ? false : true
+    self.balance <= 0 || self.status =='closed' ? false : true
   end
 
 
