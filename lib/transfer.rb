@@ -10,7 +10,8 @@ class Transfer
   end
 
   def valid?
-    BankAccount.valid?(self.sender) && BankAccount.valid?(self.receiver)
+    sender.balance <= 0 || sender.status =='closed' ? false : true 
+    receiver.balance <= 0 || receiver.status =='closed' ? false : true 
   end
 
 
