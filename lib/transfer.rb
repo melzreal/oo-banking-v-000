@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid?
-    BankAccount.balance <= 0 || BankAccount.status =='closed' ? false : true
+    BankAccount.valid?
   end
 
 
